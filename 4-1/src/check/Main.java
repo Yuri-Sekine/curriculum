@@ -14,12 +14,10 @@ public class Main {
 		robotPet.introduce();
 	}
 	
-	private String firstName = "関根";
-	private String lastName = "結理";
+	private static String  firstName = "関根";
+	private static String lastName = "結理";
 	
-	private String printName(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	private static String printName(String firstName, String lastName) {
 		
 		return firstName + lastName;
 	}
