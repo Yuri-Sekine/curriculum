@@ -50,7 +50,7 @@ public class Main {
 //      問⑥上記で格納したバリューを繰り返し文で出力しましょう。
 //	    <以下記述>
 		for(Map.Entry<String, Object> entry : map.entrySet()) {
-			System.out.println("value：" + entry.getKey());
+			System.out.println("value：" + entry.getValue());
 		}
 
 		}
@@ -58,13 +58,13 @@ public class Main {
 //      問⑦ Calender型calを使い、int型配列arrayDateに今の年・月・日を入れてください。
            Calendar cal = Calendar.getInstance();
 //	    <以下記述>
-           int [] arrayDate = {cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DATE)};
+           int [] arrayDate = {cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.DATE)};
+           
 //      問⑧ 配列arrayDateをList型に置換しましょう。
 //      ヒント：asListメソッドはプリミティブ型のデータ型のみ扱えます。
-           System.out.println(arrayDate[0]);
 //	    <以下記述>
-           List<int[]> listDate = Arrays.asList(arrayDate);
-           System.out.println(listDate.get(0));
+           List<Integer> listDate =  Arrays.asList(arrayDate[0], arrayDate[1], arrayDate[2]);
+        
 //      問⑨ 上記で格納した要素を繰り返しで出力しましょう。
 //	    <以下記述>
            for(int i=0; i<listDate.size(); i++) {
